@@ -1,0 +1,146 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+}
+
+
+.chart {
+  position: absolute;
+  width: 80vmin;
+  height: calc(80vmin * 0.86602540378);
+  top: calc((100vmin - (80vmin * 0.86602540378)) / 2);
+  left: calc((100vmin - (80vmin * 0.86602540378)) / 2);
+}
+
+.blendPoint {
+  position: absolute;
+}
+.blendPoint::before {
+  content: " ";
+  position: absolute;
+  width: 18vmin;
+  height: 18vmin;
+  background: rgba(0,0,0,.05);
+  color: #000;
+  border-radius: 50%;
+  top: -9vmin;
+  left: -9vmin;
+}
+.blendPoint__data {
+  position: absolute;
+  width: 4vmin;
+  font-size: 2vmin;
+}
+.blendPoint__cell,
+.blendPoint__pA,
+.blendPoint__pB,
+.blendPoint__pC {
+  position: absolute;
+  text-align: center;
+  width: 6vmin;
+  margin-left: -3vmin;
+  line-height: 1;
+  margin-top: -1vmin;
+}
+.blendPoint__pA {
+  color: Red;
+  top: -5vmin;
+  left: 0;
+}
+.blendPoint__pB {
+  color: Green;
+  top: 2vmin;
+  left: -4vmin;
+}
+.blendPoint__pC {
+  color: Blue;
+  top: 2vmin;
+  left: 4vmin;
+}
+.blendPoint__label {
+  display: block;
+  font-size: 0.875em;
+}
+
+.blendPoint__ingredients {
+  position: absolute;
+  text-align: center;
+  width: 12vmin;
+  transform: translate3d(-50%, -50%, 0);
+  top: 0;
+  font-size: 2vmin;
+}
+.ingredient_row {
+  white-space: nowrap;
+  display: block;
+  margin: 0.25em 0;
+}
+.ingredients_row--zero {
+  display: none;
+}
+.ingredient_label {
+  font-size: 0.675em;
+  display: block;
+}
+.ingredient_ratio {
+  font-weight: bold;
+}
+.ingredient_row--potash-feldspar {
+  color: darkblue;
+}
+.ingredient_row--synthetic-wood-ash {
+  color: brown;
+}
+.ingredient_row--kaolin {
+  color: #666;
+}
+
+/*===*/
+.controller {
+  position: absolute;
+  right: 4vmin;
+  top: 4vmin;
+  font-size: 0.875rem;
+}
+.controller__row {
+  position: relative;
+  padding-left: 8vw;
+  margin: 0.5rem 0;
+}
+.controller__row h4 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 6vw;
+  text-align: right;
+  font-size: 0.875rem;
+  color: #666;
+  margin: 0;
+}
+.controller pre {
+  margin-top: 0;
+}
+.controller textarea {
+  width: 30vw;
+  resize: vertical;
+}
+.controller textarea.has-error {
+  color: red;
+  opacity: 1;
+}
+
+
+/*===*/
+.App.has-err .chart {
+  opacity: 0.2;
+}
+
+.App.show-ingredient .blendPoint__info {
+  visibility: hidden;
+}
+.App.show-ratio .blendPoint__ingredients {
+  visibility: hidden;
+}

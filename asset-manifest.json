@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/triaxial-blend/static/css/main.6f83fa35.chunk.css",
+    "main.js": "/triaxial-blend/static/js/main.484c80a1.chunk.js",
+    "main.js.map": "/triaxial-blend/static/js/main.484c80a1.chunk.js.map",
+    "runtime-main.js": "/triaxial-blend/static/js/runtime-main.c06e3a42.js",
+    "runtime-main.js.map": "/triaxial-blend/static/js/runtime-main.c06e3a42.js.map",
+    "static/js/2.d7e2f62c.chunk.js": "/triaxial-blend/static/js/2.d7e2f62c.chunk.js",
+    "static/js/2.d7e2f62c.chunk.js.map": "/triaxial-blend/static/js/2.d7e2f62c.chunk.js.map",
+    "static/js/3.91809597.chunk.js": "/triaxial-blend/static/js/3.91809597.chunk.js",
+    "static/js/3.91809597.chunk.js.map": "/triaxial-blend/static/js/3.91809597.chunk.js.map",
+    "index.html": "/triaxial-blend/index.html",
+    "static/css/main.6f83fa35.chunk.css.map": "/triaxial-blend/static/css/main.6f83fa35.chunk.css.map",
+    "static/js/2.d7e2f62c.chunk.js.LICENSE.txt": "/triaxial-blend/static/js/2.d7e2f62c.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c06e3a42.js",
+    "static/js/2.d7e2f62c.chunk.js",
+    "static/css/main.6f83fa35.chunk.css",
+    "static/js/main.484c80a1.chunk.js"
+  ]
+}

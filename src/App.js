@@ -10,14 +10,14 @@ const defaultA =
 }
 const defaultB =
 {
-  "Synthetic Wood Ash": 60,
+  "Synthetic Wood Ash": 50,
+  "Potash Feldspar": 10,
   "Kaolin": 40
 }
 const defaultC =
 {
-  "Potash Feldspar": 0,
-  "Synthetic Wood Ash": 60,
-  "Synthetic Straw Ash": 40
+  "Synthetic Wood Ash": 50,
+  "Synthetic Straw Ash": 50
 }
 /*
     [0] [1] [2] [3] [4]

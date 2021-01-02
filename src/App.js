@@ -65,6 +65,7 @@ function App() {
   const [pointB, setPointB] = useState(defaultB);
   const [pointC, setPointC] = useState(defaultC);
   const [levels, setLevels] = useState(defaultLevels);
+  const [sampleSize, setSampleSize] = useState(20);
   const [errors, setErrors] = useState([]);
   const [showIngredient, setShowIngredient] = useState(true);
 
@@ -102,7 +103,7 @@ function App() {
       <div className="chart">
         {
           getBlends({pointA, pointB, pointC, levels}).map( blend => {
-            return <BlendPoint key={blend.cell} levels={levels} {...blend} />
+            return <BlendPoint key={blend.cell} levels={levels} sampleSize={sampleSize} {...blend} />
           } )
         }
       </div>
@@ -141,6 +142,11 @@ function App() {
         <div className="controller__row">
           <h4>Levels</h4>
           <input type="range" min={3} max={7} defaultValue={levels} onChange={e => setLevels(e.target.value)} />&nbsp;<input type="number" value={levels} readOnly />
+        </div>
+
+        <div className="controller__row">
+          <h4>Sample Size</h4>
+          <input type="range" min={20} max={100} step="5" defaultValue={sampleSize} onChange={e => setSampleSize(e.target.value)} />&nbsp;<input type="number" value={sampleSize} readOnly />
         </div>
 
         <div className="controller__row">

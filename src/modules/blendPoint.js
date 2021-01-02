@@ -1,6 +1,6 @@
 import React from 'react'
 
-const BlendPoint = ({ levels, row, col, cell, pA, pB, pC, ingredients }) => {
+const BlendPoint = ({ levels, row, col, cell, pA, pB, pC, sampleSize=20, ingredients }) => {
   let x = col / (levels-1);
   x += ((levels-1 - row) / (levels-1))*0.5;
   let y = row / (levels-1);
@@ -13,9 +13,9 @@ const BlendPoint = ({ levels, row, col, cell, pA, pB, pC, ingredients }) => {
       <div className="blendPoint__data">
         <span className="blendPoint__info">
           <span className="blendPoint__cell">{cell+1}<br/></span>
-          <span className="blendPoint__pA"><span className="blendPoint__label">A</span> <strong>{(pA*100).toFixed(1)}</strong></span><br/>
-          <span className="blendPoint__pB"><span className="blendPoint__label">B</span> <strong>{(pB*100).toFixed(1)}</strong></span><br/>
-          <span className="blendPoint__pC"><span className="blendPoint__label">C</span> <strong>{(pC*100).toFixed(1)}</strong></span>
+          <span className="blendPoint__pA"><span className="blendPoint__label">A</span> <strong>{(pA*sampleSize).toFixed(1)}</strong></span><br/>
+          <span className="blendPoint__pB"><span className="blendPoint__label">B</span> <strong>{(pB*sampleSize).toFixed(1)}</strong></span><br/>
+          <span className="blendPoint__pC"><span className="blendPoint__label">C</span> <strong>{(pC*sampleSize).toFixed(1)}</strong></span>
         </span>
         <span className="blendPoint__ingredients">{ Object.keys(ingredients).map( ik => {
           let classes = ['ingredient_row'];
